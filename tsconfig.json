@@ -41,19 +41,47 @@
     "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
     "paths": {
       "*": ["App/*"],
+
+      "@Api": ["App/Api"],
       "@Api/*": ["App/Api/*"],
+
+      "@Assets": ["App/Assets"],
       "@Assets/*": ["App/Assets/*"],
+
+      "@Images": ["App/Assets/Images"],
       "@Images/*": ["App/Assets/Images/*"],
+
+      "@Components": ["App/Components"],
       "@Components/*": ["App/Components/*"],
+
+      "@Atoms": ["App/Components/Atoms"],
       "@Atoms/*": ["App/Components/Atoms/*"],
+
+      "@Molecules": ["App/Components/Molecules"],
       "@Molecules/*": ["App/Components/Molecules/*"],
+
+      "@Organisms": ["App/Components/Organisms"],
       "@Organisms/*": ["App/Components/Organisms/*"],
+
+      "@Templates": ["App/Components/Templates"],
       "@Templates/*": ["App/Components/Templates/*"],
+
+      "@Views": ["App/Components/Views"],
       "@Views/*": ["App/Components/Views/*"],
+
+      "@Navigation": ["App/Navigation"],
       "@Navigation/*": ["App/Navigation/*"],
+
+      "@Async": ["App/Store/Async"],
       "@Async/*": ["App/Store/Async/*"],
+
+      "@Redux": ["App/Store/Redux"],
       "@Redux/*": ["App/Store/Redux/*"],
+
+      "@Theme": ["App/Theme"],
       "@Theme/*": ["App/Theme/*"],
+
+      "@Utils": ["App/Utils"],
       "@Utils/*": ["App/Utils/*"]
     } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
