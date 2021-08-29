@@ -1,3 +1,5 @@
+import { DefaultTheme } from 'react-native-paper'
+
 export const Colors = {
   // Common
   transparent: 'rgba(0,0,0,0)',
@@ -11,4 +13,15 @@ export const Colors = {
   // App Specific
   primary: 'teal',
   secondary: 'green',
+}
+
+export const theme = {
+  ...DefaultTheme,
+  roundness: 6,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: Colors.primary,
+    accent: Colors.secondary,
+    text: Colors.text,
+  },
 }
