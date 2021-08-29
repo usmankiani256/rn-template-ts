@@ -5,14 +5,16 @@ import { StackScreenProps } from '@Navigation/Stack/types'
 
 import { View } from 'react-native'
 import { Text } from '@Atoms'
+import { Button } from '@Molecules'
 
 const Welcome = (props: StackScreenProps) => {
-  const {} = useService(props)
+  const { onContinue } = useService(props)
   const { container } = useStyles()
 
   return (
     <View style={container}>
-      <Text>Hello, world!</Text>
+      <Text>Welcome to the React Native Template TS</Text>
+      <Button onPress={onContinue}>Continue</Button>
     </View>
   )
 }

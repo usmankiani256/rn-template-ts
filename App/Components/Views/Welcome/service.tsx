@@ -3,7 +3,11 @@ import {} from 'react-native'
 import { StackScreenProps } from '@Navigation/Stack/types'
 
 const useService = (props: StackScreenProps) => {
-  return {}
+  const onContinue = () => {
+    props.navigation.navigate('User')
+  }
+
+  return { onContinue }
 }
 
 export default useService
