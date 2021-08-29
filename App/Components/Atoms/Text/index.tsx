@@ -8,7 +8,11 @@ interface TextProps {
 const Text = (props: TextProps) => {
   const { children } = props
 
-  return <RNText>{children}</RNText>
+  const textStyle = {
+    fontSize: 18,
+  }
+
+  return <RNText style={textStyle}>{children}</RNText>
 }
 
 export default Text
