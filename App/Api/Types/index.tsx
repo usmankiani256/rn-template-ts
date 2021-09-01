@@ -5,3 +5,9 @@ export interface USER_DATA {
   email: string
   phone: string
 }
+
+export interface USERS_RESPONSE {
+  users: {
+    data: Array<USER_DATA>
+  }
+}
