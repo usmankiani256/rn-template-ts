@@ -1,1 +1,1 @@
-export { default as fetchRandomUser } from './User'
+export { default as fetchUsers } from './User'

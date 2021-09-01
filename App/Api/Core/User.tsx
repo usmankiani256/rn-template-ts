@@ -1,20 +1,17 @@
 import { client } from '@Api'
-import { FetchRandomUser } from '@Api/Queries'
-import { USER_DATA } from '@Api/Types'
+import { FetchUsers } from '@Api/Queries'
+import { USER_DATA, USERS_RESPONSE } from '@Api/Types'
 
-const fetchRandomUser = async (): Promise<USER_DATA> => {
-  let randomID = Math.floor(Math.random() * 10) + 1
-  let variables = { id: randomID }
+const fetchUsers = async (): Promise<USER_DATA[]> => {
+  let variables = {}
 
   try {
-    const data = await client.request<{ user: USER_DATA }>(
-      FetchRandomUser,
-      variables,
-    )
-    return data.user
+    const response = await client.request<USERS_RESPONSE>(FetchUsers, variables)
+
+    return response.users.data
   } catch (error) {
     return error.response
   }
 }
 
-export default fetchRandomUser
+export default fetchUsers
