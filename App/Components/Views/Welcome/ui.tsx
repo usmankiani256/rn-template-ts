@@ -3,19 +3,23 @@ import useService from './service'
 import useStyles from './styles'
 import { StackScreenProps } from '@Navigation/Stack/types'
 
-import { View } from 'react-native'
+import { StatusBar, View } from 'react-native'
 import { Text } from '@Atoms'
 import { Button } from '@Molecules'
+import { Colors } from '@Theme'
 
 const Welcome = (props: StackScreenProps) => {
   const { onContinue } = useService(props)
   const { container } = useStyles()
 
   return (
-    <View style={container}>
-      <Text>Welcome to the React Native Template TS</Text>
-      <Button onPress={onContinue}>Continue</Button>
-    </View>
+    <>
+      <StatusBar backgroundColor={Colors.primary} />
+      <View style={container}>
+        <Text>Welcome to the React Native Template TS</Text>
+        <Button onPress={onContinue}>Continue</Button>
+      </View>
+    </>
   )
 }
 
