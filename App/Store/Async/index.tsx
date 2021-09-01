@@ -3,6 +3,7 @@ import Item from './items'
 
 export type AsyncItem = string
 
+// TODO: Shift it back to class and remove it as a custom hook
 const useAsync = () => {
   async function setItem(item: AsyncItem, data: JSON) {
     let parsedData = JSON.stringify(data)
