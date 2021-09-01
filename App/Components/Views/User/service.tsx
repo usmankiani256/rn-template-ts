@@ -1,21 +1,34 @@
-import React from 'react'
 import {} from 'react-native'
 import { StackScreenProps } from '@Navigation/Stack/types'
-import { fetchRandomUser } from '@Api/Core'
+import { fetchUsers, selectUserById } from '@Redux/Users'
+import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { RootState } from '@Redux'
 
 const useService = (props: StackScreenProps) => {
-  const fetch = async () => {
-    try {
-      const data = await fetchRandomUser()
-      console.log('Users', data)
-    } catch (error) {
-      console.log(error)
-    }
+  const [userID, setUserID] = useState('')
+
+  const dispatch = useDispatch()
+
+  const { loading, success } = useSelector((state: RootState) => state.Users)
+  const user = useSelector((state: RootState) => selectUserById(state, userID))
+
+  useEffect(() => {
+    dispatch(fetchUsers())
+  }, [])
+
+  const setRandomID = () => {
+    let randomID: string = (Math.floor(Math.random() * 10) + 1).toString()
+    setUserID(randomID)
   }
 
-  fetch()
+  useEffect(() => {
+    if (success) {
+      setRandomID()
+    }
+  }, [loading, success])
 
-  return {}
+  return { loading, success, user, setRandomID }
 }
 
 export default useService
