@@ -14,7 +14,7 @@ const User = (props: StackScreenProps) => {
   if (loading) {
     return (
       <View style={container}>
-        <Text>Fetching data...</Text>
+        <Text w5>Fetching data...</Text>
       </View>
     )
   }
@@ -22,47 +22,49 @@ const User = (props: StackScreenProps) => {
   if (!success) {
     return (
       <View style={container}>
-        <Text>Failed to fetch</Text>
+        <Text w5>Failed to fetch</Text>
       </View>
     )
   }
 
   return (
     <View style={container}>
-      <Text>Random User:</Text>
+      <Text h3 w4>
+        Random User:
+      </Text>
 
       <View>
         <View style={row}>
-          <Text>ID:</Text>
-          <Text>{user?.id}</Text>
+          <Text w3>ID:</Text>
+          <Text w5>{user?.id}</Text>
         </View>
 
         <View style={spacing} />
 
         <View style={row}>
-          <Text>Name:</Text>
-          <Text>{user?.name}</Text>
+          <Text w3>Name:</Text>
+          <Text w5>{user?.name}</Text>
         </View>
 
         <View style={spacing} />
 
         <View style={row}>
-          <Text>Username:</Text>
-          <Text>{user?.username}</Text>
+          <Text w3>Username:</Text>
+          <Text w5>{user?.username}</Text>
         </View>
 
         <View style={spacing} />
 
         <View style={row}>
-          <Text>Email:</Text>
-          <Text>{user?.email.toLowerCase()}</Text>
+          <Text w3>Email:</Text>
+          <Text w5>{user?.email.toLowerCase()}</Text>
         </View>
 
         <View style={spacing} />
 
         <View style={row}>
-          <Text>Phone</Text>
-          <Text>{user?.phone}</Text>
+          <Text w3>Phone</Text>
+          <Text w5>{user?.phone}</Text>
         </View>
       </View>
 

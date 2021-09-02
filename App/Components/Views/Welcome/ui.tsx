@@ -16,7 +16,9 @@ const Welcome = (props: StackScreenProps) => {
     <>
       <StatusBar backgroundColor={Colors.primary} />
       <View style={container}>
-        <Text>Welcome to the React Native Template TS</Text>
+        <Text h3 center>
+          Welcome to the React Native Template TS
+        </Text>
         <Button onPress={onContinue}>Continue</Button>
       </View>
     </>

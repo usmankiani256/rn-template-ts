@@ -1,5 +1,6 @@
 import { DefaultTheme } from 'react-native-paper'
 
+/*  APP SPECIFIC COLORS  */
 export const Colors = {
   // Common
   transparent: 'rgba(0,0,0,0)',
@@ -10,18 +11,37 @@ export const Colors = {
   success: '#28a745',
   error: '#dc3545',
 
-  // App Specific
   primary: 'teal',
   secondary: 'green',
+}
+
+/*  APP SPECIFIC FONTS  */
+export const FontFamily = {
+  Bold: 'SofiaPro-Bold',
+  SemiBold: 'SofiaPro-SemiBold',
+  Medium: 'SofiaPro-Medium',
+  Regular: 'SofiaPro',
+  Light: 'SofiaPro-Light',
+}
+
+/*  REACT NATIVE PAPER THEME  */
+const fontConfig = {
+  regular: { fontFamily: FontFamily.Regular },
+  medium: { fontFamily: FontFamily.Medium },
+  light: { fontFamily: FontFamily.Light },
+  thin: { fontFamily: FontFamily.Light },
+}
+
+const colorsConfig = {
+  ...DefaultTheme.colors,
+  primary: Colors.primary,
+  accent: Colors.secondary,
+  text: Colors.text,
 }
 
 export const theme = {
   ...DefaultTheme,
   roundness: 6,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: Colors.primary,
-    accent: Colors.secondary,
-    text: Colors.text,
-  },
+  fonts: fontConfig,
+  colors: colorsConfig,
 }
