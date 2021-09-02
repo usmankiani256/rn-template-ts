@@ -7,7 +7,7 @@ const Button = (props: ButtonProps) => {
   const { children, onPress, icon } = props
 
   return (
-    <PaperButton icon={icon} mode="contained" onPress={onPress}>
+    <PaperButton {...props} icon={icon} mode="contained" onPress={onPress}>
       {children}
     </PaperButton>
   )
