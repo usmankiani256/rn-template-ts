@@ -7,8 +7,18 @@ const useStyles = () =>
     container: {
       flex: 1,
       alignItems: 'center',
-      justifyContent: 'space-evenly',
-      paddingVertical: '33%',
+      paddingHorizontal: '5%',
+    },
+    image: {
+      height: 200,
+      width: width * 0.8,
+      marginTop: 70,
+      marginBottom: 50,
+      alignSelf: 'center',
+    },
+    button: {
+      marginTop: 100,
+      paddingHorizontal: 25,
     },
   })
 
