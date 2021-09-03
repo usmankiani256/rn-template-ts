@@ -3,12 +3,18 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "adb": "adb devices",
+    "clean": "cd android && ./gradlew clean && cd ..",
+    "android": "npx react-native run-android",
+    "generate:apk": "cd android && ./gradlew assembleRelease && cd ..",
+    "generate:aab": "cd android && ./gradlew bundleRelease && cd ..",
+    "ios": "npx react-native run-ios --simulator=\"iPhone 8\"",
+    "install:pods": "cd ios && pod install && cd ..",
+    "build:ios": "npx react-native bundle --entry-file='index.js' --bundle-output='./ios/RNTemplateTS/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
+    "commit": "gitmoji -c",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "build:ios": "npx react-native bundle --entry-file='index.js' --bundle-output='./ios/RNTemplateTS/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
