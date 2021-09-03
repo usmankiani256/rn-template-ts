@@ -22,6 +22,7 @@ const useStyles = () =>
     },
     button: {
       marginTop: height * 0.1,
+      paddingHorizontal: 25,
     },
   })
 

@@ -6,10 +6,25 @@ import { StackScreenProps } from '@Navigation/Stack/types'
 import { View } from 'react-native'
 import { Text } from '@Atoms'
 import { Button } from '@Molecules'
+import { Screen } from '@Templates'
 
 const User = (props: StackScreenProps) => {
   const { loading, success, user, setRandomID } = useService(props)
   const { container, row, button, root } = useStyles()
+
+  let renderLines = () => {
+    if (!user) return null
+
+    return Object.entries(user).map(([key, value]) => {
+      console.log(`${key}: ${value}`)
+      return (
+        <View style={row}>
+          <Text w3>{key.toUpperCase()}:</Text>
+          <Text w5>{value}</Text>
+        </View>
+      )
+    })
+  }
 
   if (loading) {
     return (
@@ -28,42 +43,19 @@ const User = (props: StackScreenProps) => {
   }
 
   return (
-    <View style={root}>
-      <Text h3 w4>
-        Random User:
-      </Text>
+    <Screen>
+      <View style={root}>
+        <Text h3 w4>
+          Random User:
+        </Text>
 
-      <View>
-        <View style={row}>
-          <Text w3>ID:</Text>
-          <Text w5>{user?.id}</Text>
-        </View>
+        <View>{renderLines()}</View>
 
-        <View style={row}>
-          <Text w3>Name:</Text>
-          <Text w5>{user?.name}</Text>
-        </View>
-
-        <View style={row}>
-          <Text w3>Username:</Text>
-          <Text w5>{user?.username}</Text>
-        </View>
-
-        <View style={row}>
-          <Text w3>Email:</Text>
-          <Text w5>{user?.email.toLowerCase()}</Text>
-        </View>
-
-        <View style={row}>
-          <Text w3>Phone</Text>
-          <Text w5>{user?.phone}</Text>
-        </View>
+        <Button style={button} onPress={setRandomID}>
+          Get Random User
+        </Button>
       </View>
-
-      <Button style={button} onPress={setRandomID}>
-        Get Random User
-      </Button>
-    </View>
+    </Screen>
   )
 }
 
