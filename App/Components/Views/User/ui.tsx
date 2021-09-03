@@ -16,7 +16,6 @@ const User = (props: StackScreenProps) => {
     if (!user) return null
 
     return Object.entries(user).map(([key, value]) => {
-      console.log(`${key}: ${value}`)
       return (
         <View style={row}>
           <Text w3>{key.toUpperCase()}:</Text>
