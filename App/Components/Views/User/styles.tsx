@@ -7,15 +7,21 @@ const useStyles = () =>
     container: {
       flex: 1,
       alignItems: 'center',
-      justifyContent: 'space-evenly',
+      justifyContent: 'center',
     },
-    spacing: {
-      height: height * 0.033,
+    root: {
+      flex: 1,
+      alignItems: 'center',
+      paddingTop: height * 0.05,
     },
     row: {
       flexDirection: 'row',
       justifyContent: 'space-between',
       width: width * 0.8,
+      marginTop: height * 0.05,
+    },
+    button: {
+      marginTop: height * 0.1,
     },
   })
 

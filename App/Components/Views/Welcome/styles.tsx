@@ -12,12 +12,12 @@ const useStyles = () =>
     image: {
       height: 200,
       width: width * 0.8,
-      marginTop: 70,
-      marginBottom: 50,
+      marginTop: height * 0.05,
+      marginBottom: height * 0.05,
       alignSelf: 'center',
     },
     button: {
-      marginTop: 100,
+      marginTop: height * 0.1,
       paddingHorizontal: 25,
     },
   })

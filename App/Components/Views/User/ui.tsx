@@ -9,7 +9,7 @@ import { Button } from '@Molecules'
 
 const User = (props: StackScreenProps) => {
   const { loading, success, user, setRandomID } = useService(props)
-  const { container, spacing, row } = useStyles()
+  const { container, row, button, root } = useStyles()
 
   if (loading) {
     return (
@@ -28,7 +28,7 @@ const User = (props: StackScreenProps) => {
   }
 
   return (
-    <View style={container}>
+    <View style={root}>
       <Text h3 w4>
         Random User:
       </Text>
@@ -39,28 +39,20 @@ const User = (props: StackScreenProps) => {
           <Text w5>{user?.id}</Text>
         </View>
 
-        <View style={spacing} />
-
         <View style={row}>
           <Text w3>Name:</Text>
           <Text w5>{user?.name}</Text>
         </View>
-
-        <View style={spacing} />
 
         <View style={row}>
           <Text w3>Username:</Text>
           <Text w5>{user?.username}</Text>
         </View>
 
-        <View style={spacing} />
-
         <View style={row}>
           <Text w3>Email:</Text>
           <Text w5>{user?.email.toLowerCase()}</Text>
         </View>
-
-        <View style={spacing} />
 
         <View style={row}>
           <Text w3>Phone</Text>
@@ -68,7 +60,9 @@ const User = (props: StackScreenProps) => {
         </View>
       </View>
 
-      <Button onPress={setRandomID}>Get Random User</Button>
+      <Button style={button} onPress={setRandomID}>
+        Get Random User
+      </Button>
     </View>
   )
 }
