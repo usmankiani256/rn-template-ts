@@ -7,7 +7,6 @@ const useStyles = () =>
     container: {
       flex: 1,
       alignItems: 'center',
-      paddingHorizontal: '5%',
     },
     image: {
       height: 200,
