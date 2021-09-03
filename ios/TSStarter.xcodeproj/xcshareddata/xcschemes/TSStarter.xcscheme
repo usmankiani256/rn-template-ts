@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "RNTemplateTS.app"
-               BlueprintName = "RNTemplateTS"
-               ReferencedContainer = "container:RNTemplateTS.xcodeproj">
+               BuildableName = "TSStarter.app"
+               BlueprintName = "TSStarter"
+               ReferencedContainer = "container:TSStarter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "RNTemplateTSTests.xctest"
-               BlueprintName = "RNTemplateTSTests"
-               ReferencedContainer = "container:RNTemplateTS.xcodeproj">
+               BuildableName = "TSStarterTests.xctest"
+               BlueprintName = "TSStarterTests"
+               ReferencedContainer = "container:TSStarter.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RNTemplateTS.app"
-            BlueprintName = "RNTemplateTS"
-            ReferencedContainer = "container:RNTemplateTS.xcodeproj">
+            BuildableName = "TSStarter.app"
+            BlueprintName = "TSStarter"
+            ReferencedContainer = "container:TSStarter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RNTemplateTS.app"
-            BlueprintName = "RNTemplateTS"
-            ReferencedContainer = "container:RNTemplateTS.xcodeproj">
+            BuildableName = "TSStarter.app"
+            BlueprintName = "TSStarter"
+            ReferencedContainer = "container:TSStarter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

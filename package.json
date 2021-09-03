@@ -1,5 +1,5 @@
 {
-  "name": "RNTemplateTS",
+  "name": "TSStarter",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "install:pods": "cd ios && pod install && cd ..",
     "build:ios": "npx react-native bundle --entry-file='index.js' --bundle-output='./ios/RNTemplateTS/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
     "commit": "gitmoji -c",
+    "rename": "npx react-native-rename",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
