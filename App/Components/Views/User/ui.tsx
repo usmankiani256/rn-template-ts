@@ -6,15 +6,29 @@ import { StackScreenProps } from '@Navigation/Stack/types'
 import { View } from 'react-native'
 import { Text } from '@Atoms'
 import { Button } from '@Molecules'
+import { Screen } from '@Templates'
 
 const User = (props: StackScreenProps) => {
   const { loading, success, user, setRandomID } = useService(props)
-  const { container, spacing, row } = useStyles()
+  const { container, row, button, root } = useStyles()
+
+  let renderLines = () => {
+    if (!user) return null
+
+    return Object.entries(user).map(([key, value]) => {
+      return (
+        <View style={row}>
+          <Text w3>{key.toUpperCase()}:</Text>
+          <Text w5>{value}</Text>
+        </View>
+      )
+    })
+  }
 
   if (loading) {
     return (
       <View style={container}>
-        <Text>Fetching data...</Text>
+        <Text w5>Fetching data...</Text>
       </View>
     )
   }
@@ -22,52 +36,25 @@ const User = (props: StackScreenProps) => {
   if (!success) {
     return (
       <View style={container}>
-        <Text>Failed to fetch</Text>
+        <Text w5>Failed to fetch</Text>
       </View>
     )
   }
 
   return (
-    <View style={container}>
-      <Text>Random User:</Text>
+    <Screen>
+      <View style={root}>
+        <Text h3 w4>
+          Random User:
+        </Text>
 
-      <View>
-        <View style={row}>
-          <Text>ID:</Text>
-          <Text>{user?.id}</Text>
-        </View>
+        <View>{renderLines()}</View>
 
-        <View style={spacing} />
-
-        <View style={row}>
-          <Text>Name:</Text>
-          <Text>{user?.name}</Text>
-        </View>
-
-        <View style={spacing} />
-
-        <View style={row}>
-          <Text>Username:</Text>
-          <Text>{user?.username}</Text>
-        </View>
-
-        <View style={spacing} />
-
-        <View style={row}>
-          <Text>Email:</Text>
-          <Text>{user?.email.toLowerCase()}</Text>
-        </View>
-
-        <View style={spacing} />
-
-        <View style={row}>
-          <Text>Phone</Text>
-          <Text>{user?.phone}</Text>
-        </View>
+        <Button style={button} onPress={setRandomID}>
+          Get Random User
+        </Button>
       </View>
-
-      <Button onPress={setRandomID}>Get Random User</Button>
-    </View>
+    </Screen>
   )
 }
 

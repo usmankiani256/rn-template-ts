@@ -1,11 +1,20 @@
 {
-  "name": "RNTemplateTS",
+  "name": "TSStarter",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "adb": "adb devices",
+    "clean": "cd android && ./gradlew clean && cd ..",
+    "android": "npx react-native run-android",
+    "generate:apk": "cd android && ./gradlew assembleRelease && cd ..",
+    "generate:aab": "cd android && ./gradlew bundleRelease && cd ..",
+    "ios": "npx react-native run-ios --simulator=\"iPhone 8\"",
+    "install:pods": "cd ios && pod install && cd ..",
+    "build:ios": "npx react-native bundle --entry-file='index.js' --bundle-output='./ios/TSStarter/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
+    "commit": "gitmoji -c",
+    "rename": "npx react-native-rename",
     "start": "react-native start",
+    "start:reset": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
