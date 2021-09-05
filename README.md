@@ -57,7 +57,7 @@ yarn pods && yarn ios
 
 ## Features
 
-This project is packed with all the essential stuff you need for starting project (small - intermediate). Some of the features are:
+This project is packed with all the essential stuff you need for starting project (small - large). Some of the features are:
 
 - Easy and quick setup
 - TypeScript Supported
@@ -69,3 +69,19 @@ This project is packed with all the essential stuff you need for starting projec
 - Decoupled UI and Data
 - Clean scalable architecture
 - react-navigation, ESLint, Prettier and so much more.
+
+## Full Documentation
+
+To read the whole documentation, go to [full documentation](https://github.com/usmankiani256/ts-starter.git)
+
+## Useful Links
+
+- [Atomic Design Methodology](https://atomicdesign.bradfrost.com/chapter-2/)
+- [Using GraphQL](https://github.com/prisma-labs/graphql-request)
+- [Using Redux Toolkit with TypeScript](https://redux-toolkit.js.org/usage/usage-with-typescript)
+- [React Native Paper Usage](https://callstack.github.io/react-native-paper/index.html)
+- [Decouple Data from UI using custom hooks](https://felixgerschau.com/react-hooks-separation-of-concerns/)
+
+## License
+
+This project is released under the [MIT License](https://github.com/usmankiani256/ts-starter/blob/main/LICENSE).
