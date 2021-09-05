@@ -1,1 +1,1 @@
-# rn-template-ts
+# ts-starter
