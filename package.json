@@ -11,7 +11,7 @@
     "ios": "npx react-native run-ios --simulator=\"iPhone 8\"",
     "install:pods": "cd ios && pod install && cd ..",
     "build:ios": "npx react-native bundle --entry-file='index.js' --bundle-output='./ios/TSStarter/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
-    "commit": "gitmoji -c",
+    "commit": "npx gitmoji -c",
     "rename": "npx react-native-rename",
     "start": "react-native start",
     "start:reset": "react-native start --reset-cache",
