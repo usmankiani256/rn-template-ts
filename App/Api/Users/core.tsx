@@ -1,6 +1,6 @@
 import { client } from '@Api'
-import { FetchUsers } from '@Api/Queries'
-import { USER_DATA, USERS_RESPONSE } from '@Api/Types'
+import { FetchUsers } from './queries'
+import { USER_DATA, USERS_RESPONSE } from './types'
 
 const fetchUsers = async (): Promise<USER_DATA[]> => {
   let variables = {}
