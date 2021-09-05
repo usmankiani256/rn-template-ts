@@ -15,9 +15,9 @@ const User = (props: StackScreenProps) => {
   let renderLines = () => {
     if (!user) return null
 
-    return Object.entries(user).map(([key, value]) => {
+    return Object.entries(user).map(([key, value], index) => {
       return (
-        <View style={row}>
+        <View key={index} style={row}>
           <Text w3>{key.toUpperCase()}:</Text>
           <Text w5>{value}</Text>
         </View>
