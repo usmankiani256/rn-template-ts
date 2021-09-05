@@ -1,7 +1,7 @@
 {
-  "name": "TSStarter",
-  "version": "1.0.0",
-  "private": true,
+  "name": "@usmankiani256/ts-starter",
+  "description": "This starter project is a React Native TypeScript boilerplate to kick start the development setup process.",
+  "version": "1.0.1",
   "scripts": {
     "adb": "adb devices",
     "clean": "cd android && ./gradlew clean && cd ..",
@@ -53,6 +53,22 @@
   "resolutions": {
     "@types/react": "^17"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usmankiani256/ts-starter.git"
+  },
+  "author": "Muhammad Usman Kiani",
+  "license": "MIT",
+  "homepage": "https://github.com/usmankiani256/ts-starter",
+  "keywords": [
+    "react",
+    "react-native",
+    "native",
+    "typescript",
+    "ts-starter",
+    "usmankiani256",
+    "boilerplate"
+  ],
   "jest": {
     "preset": "react-native",
     "moduleFileExtensions": [
