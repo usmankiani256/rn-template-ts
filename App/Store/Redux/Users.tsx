@@ -4,8 +4,7 @@ import {
   createSlice,
 } from '@reduxjs/toolkit'
 import { RootState } from '@Redux'
-import { fetchUsers as fetch } from '@Api/Core'
-import { USER_DATA } from '@Api/Types'
+import { fetchUsers as fetch, USER_DATA } from '@Api/Users'
 
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
   const response = await fetch()
