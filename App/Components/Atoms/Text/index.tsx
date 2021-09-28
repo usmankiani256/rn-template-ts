@@ -5,7 +5,7 @@ import {
   TextProps as RNTextProps,
 } from 'react-native'
 import { scaleFont } from '@Utils'
-import { FontFamily } from '@Theme'
+import { Colors, FontFamily } from '@Theme'
 
 interface TextProps extends RNTextProps {
   children: React.ReactNode
@@ -51,7 +51,9 @@ const Text = (props: TextProps) => {
     ...rest
   } = props
 
-  let textStyle: TextStyle = {}
+  let textStyle: TextStyle = {
+    color: Colors.text,
+  }
 
   if (h1) textStyle.fontSize = scaleFont(48)
   else if (h2) textStyle.fontSize = scaleFont(34)
