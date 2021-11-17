@@ -55,12 +55,25 @@ const Text = (props: TextProps) => {
     color: Colors.text,
   }
 
-  if (h1) textStyle.fontSize = scaleFont(48)
-  else if (h2) textStyle.fontSize = scaleFont(34)
-  else if (h3) textStyle.fontSize = scaleFont(24)
-  else if (h4) textStyle.fontSize = scaleFont(20)
-  else if (p) textStyle.fontSize = scaleFont(14)
-  else if (h5) textStyle.fontSize = scaleFont(16)
+  if (h1) {
+    textStyle.fontSize = scaleFont(48)
+    textStyle.lineHeight = scaleFont(48)
+  } else if (h2) {
+    textStyle.fontSize = scaleFont(34)
+    textStyle.lineHeight = scaleFont(34)
+  } else if (h3) {
+    textStyle.fontSize = scaleFont(24)
+    textStyle.lineHeight = scaleFont(24)
+  } else if (h4) {
+    textStyle.fontSize = scaleFont(20)
+    textStyle.lineHeight = scaleFont(20)
+  } else if (p) {
+    textStyle.fontSize = scaleFont(14)
+    textStyle.lineHeight = scaleFont(14)
+  } else if (h5) {
+    textStyle.fontSize = scaleFont(16)
+    textStyle.lineHeight = scaleFont(16)
+  }
 
   if (w1) textStyle.fontFamily = FontFamily.Bold
   else if (w2) textStyle.fontFamily = FontFamily.SemiBold
